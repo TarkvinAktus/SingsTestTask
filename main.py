@@ -14,6 +14,9 @@ for i in signs_list:
         result += numbers[j]
     result += numbers[j+1]
 
+    if result[0] == signs['1']:
+        result = result[1:]
+
     sum = eval(result)
 
     if sum == result_sum:
