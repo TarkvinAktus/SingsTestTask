@@ -14,10 +14,9 @@ for i in signs_list:
         result += numbers[j]
     result += numbers[j+1]
 
-    if result[0] == signs['1']:
-        result = result[1:]
+    #dont count cases with first + sign
+    if result[0] != signs['1']:
+        sum = eval(result)
 
-    sum = eval(result)
-
-    if sum == result_sum:
-        print(result + " = 200")
+        if sum == result_sum:
+            print(result + " = 200")
